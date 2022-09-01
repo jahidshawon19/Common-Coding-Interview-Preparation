@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void mergeArrays(int arr1[], int arr2[], int n1, int n2, int arr3[]){
+int mergeArrays(int arr1[], int arr2[], int n1, int n2, int arr3[]){
 
     int i=0,j=0,k=0;
 
