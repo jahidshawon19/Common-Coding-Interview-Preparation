@@ -9,10 +9,10 @@ int binarySearch(int arr[], int n, int key){
 
         if(arr[mid]==key){
             return mid;
-        }else if(arr[mid]>key){
-            e=mid-1;
-        }else{
+        }else if(arr[mid]<key){
             s=mid+1;
+        }else{
+           e=mid-1;
         }
     }
     return -1;

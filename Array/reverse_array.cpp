@@ -1,29 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
+void reverseArray(int arr[], int n){
 
+    for(int i=0; i<n/2; i++){
+        int temp = arr[i];
+        arr[i] = arr[n-i-1];
+        arr[n-i-1] = temp;
+    }
+
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
+
+}
 int main()
 {
-    int N,temp;
-    cout<<"Number of Elements: "<<endl;
+    int N;
     cin>>N;
-    int myArr[N];
+    int data[N];
 
     for(int i=0; i<N; i++){
-        cin>>myArr[i];
+        cin>>data[i];
     }
 
-    int size = sizeof(myArr)/sizeof(myArr[0]);
+    reverseArray(data, N);
 
-    for(int i=0; i<(size/2); i++){
-        temp = myArr[i];
-        myArr[i] = myArr[size-1-i];
-        myArr[size-1-i]=temp;
-    }
-
-    cout<<"Display Reverse Elements"<<endl;
-    for(int i=0; i<size; i++){
-        cout<<myArr[i]<<" ";
-    }
 
     return 0;
 }
