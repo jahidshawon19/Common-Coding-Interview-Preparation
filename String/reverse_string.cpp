@@ -1,14 +1,37 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-    string str;
-    string  reverse_string;
-    getline(cin, str);
-    for(int i=str.size()-1; i>=0; i--){
-        reverse_string.push_back(str[i]);
+
+
+void reverseString(char str[], int len){
+
+    int s=0;   // start index of str[]
+    int e=len-1; // last index od str[]
+    while(s<e){
+        swap(str[s], str[e]);
+
+        s++;
+        e--;
+
     }
-    cout<<reverse_string<<endl;
+
+    cout<<str<<endl;
+
+
+}
+int main(){
+
+    char str[50];
+    cin>>str;
+    int len=0;
+
+
+    for(int i=0; str[i] != '\0'; i++){
+        len++;
+    }
+
+    reverseString(str,len);
+
+
 
     return 0;
 }

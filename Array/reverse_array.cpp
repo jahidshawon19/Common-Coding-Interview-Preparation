@@ -1,17 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 void reverseArray(int arr[], int n){
+    int s = 0;  // first index
+    int e = n-1;   // last index
 
-    for(int i=0; i<n/2; i++){
-        int temp = arr[i];
-        arr[i] = arr[n-i-1];
-        arr[n-i-1] = temp;
+    while(s<e){
+        swap(arr[s], arr[e]);
+        s++;
+        e--;
     }
-
+    cout<<"After Reversed"<<endl;
     for(int i=0; i<n; i++){
+
         cout<<arr[i]<<" ";
     }
-
 }
 int main()
 {
